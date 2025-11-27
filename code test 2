@@ -1,0 +1,28 @@
+class Product {
+    protected int productId;
+    public Product(int productId) {
+        this.productId = productId;
+    }
+    public void showDetails() {
+        System.out.println("Product ID: " + productId);
+    }
+}
+class Electronics extends Product {
+    private int warranty; 
+    public Electronics(int productId, int warranty) {
+        super(productId);
+        this.warranty = warranty;
+    }
+    @Override
+    public void showDetails() {
+        super.showDetails(); 
+        System.out.println("Warranty: " + warranty + " Years");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Electronics laptop = new Electronics(101, 2);
+        laptop.showDetails();
+    }
+}
