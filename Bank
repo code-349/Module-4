@@ -1,0 +1,25 @@
+interface Bank {
+    float rateOfInterest();
+}
+
+class SBI implements Bank {
+    public float rateOfInterest() {
+        return 7.2f;
+    }
+}
+
+class HDFC implements Bank {
+    public float rateOfInterest() {
+        return 7.8f;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Bank b1 = new SBI();
+        Bank b2 = new HDFC();
+
+        System.out.println(b1.rateOfInterest());
+        System.out.println(b2.rateOfInterest());
+    }
+}
