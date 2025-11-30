@@ -1,0 +1,58 @@
+class Book {
+    public String title;
+    public int price;
+
+    Book(String title, int price) {
+        this.title = title;
+        this.price = price;
+    }
+
+    public String toString() {
+        return "Book[title=" + title + ", price=" + price + "]";
+    }
+}
+
+class Student {
+    int roll;
+
+    Student(int roll) {
+        this.roll = roll;
+    }
+
+    public boolean equals(Object o) {
+        Student s = (Student) o;
+        return this.roll == s.roll;
+    }
+
+    public int hashCode() {
+        return roll;
+    }
+}
+
+class Movie {
+    String name, actor;
+
+    Movie(String name, String actor) {
+        this.name = name;
+        this.actor = actor;
+    }
+
+    public String toString() {
+        return "Movie[name=" + name + ", actor=" + actor + "]";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Book b = new Book("Java", 500);
+        System.out.println(b);
+
+        Student s1 = new Student(101);
+        Student s2 = new Student(101);
+        System.out.println(s1.equals(s2));
+        System.out.println(s1.hashCode() == s2.hashCode());
+
+        Movie m = new Movie("KGF", "Yash");
+        System.out.println(m);
+    }
+}
