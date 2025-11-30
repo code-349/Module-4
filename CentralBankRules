@@ -1,0 +1,17 @@
+class CentralBankRules {
+    final void bankPolicy() {
+        System.out.println("Policy: Customer account number cannot be changed.");
+    }
+}
+
+class Account extends CentralBankRules {
+    final String accountNumber = "ACC12345";
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Account a = new Account();
+        a.bankPolicy();
+        System.out.println("Account Number: " + a.accountNumber);
+    }
+}
