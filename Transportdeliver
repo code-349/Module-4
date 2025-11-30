@@ -1,0 +1,33 @@
+class Transport {
+    void deliver() {
+        System.out.println("General delivery");
+    }
+}
+
+class Truck extends Transport {
+    void deliver() {
+        System.out.println("Truck delivers goods");
+    }
+}
+
+class Ship extends Transport {
+    void deliver() {
+        System.out.println("Ship delivers overseas");
+    }
+}
+
+class Airplane extends Transport {
+    void deliver() {
+        System.out.println("Airplane delivers fast parcels");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Transport t;
+
+        t = new Truck(); t.deliver();
+        t = new Ship(); t.deliver();
+        t = new Airplane(); t.deliver();
+    }
+}
